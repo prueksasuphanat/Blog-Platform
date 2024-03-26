@@ -13,9 +13,11 @@
     <header class="header">
         <nav class="nav nav__container">
             
-            <a class="nav__logo" href="#">Pruek</a>
+            <a class="nav__logo" href="#">Personal Blog</a>
+            
             <div class="nav__menu">
                 <ul class="nav__list grid">
+                    
                     <li class="nav__item">
                         <a class="nav__link active-link" href="home" onclick="scrollToSection('home')">
                             <i class="uil uil-home nav__icon"></i>
@@ -25,20 +27,30 @@
                     <li class="nav__item">
                         <a class="nav__link" href="about" onclick="scrollToSection('about')">
                             <i class="uil uil-user nav__icon"></i>
-                            About
+                            Blog
                         </a>
                     </li>
                     <li class="nav__item">
                         <a class="nav__link" href="portfolio" onclick="scrollToSection('portfolio')">
                             <i class="uil uil-scenery nav__icon"></i>
-                            Portfolio
+                            Create Blog
                         </a>
                     </li>
                     <li class="nav__item">
                         <a class="nav__link" href="contact" onclick="scrollToSection('contact')">
                             <i class="uil uil-message nav__icon"></i>
-                            Contact
+                            Profile
                         </a>
+                    </li>
+
+                    <li class="nav__item nav__link">
+                        <a class="button button--flex login__btn ">login</a>
+                    </li>
+                    <li class="nav__item nav__link">
+                        <a class="button--flex register__btn">Register</a>
+                    </li>
+                    <li class="nav__item nav__link">
+                        <a class="button--flex register__btn" id="logout__btn">Logout</a>
                     </li>
                 </ul>
 
@@ -58,7 +70,106 @@
 </head>
 
 <body>
-    <div class="home">a</div>
+    <div class="banner">
+        <div class="banner__header">
+            <div class="banner__content container grid">
+                <div class="banner__img"></div> 
+                <div class="banner__data">
+                    <h1 class="banner__title">Welcome 👋🏻 </h1>
+                    <h2 class="banner__subtitle">to my personal blog</h2>
+                    <div class="banner__subdata">
+                        <p class="banner__description">"Suphanat Panyakom"</p>
+                        <div class="banner__social">
+                            <a class="banner__social-icon" target="_blank" href="http://www.linkedin.com/in/suphanat-panyakom-1483522bb">
+                                <i class="uil uil-linkedin-alt"></i>
+                            </a>
+                            <a class="banner__social-icon" target="_blank" href="https://github.com/prueksasuphanat">
+                                <i class="uil uil-github-alt"></i>                
+                            </a>
+                            <a class="banner__social-icon" target="_blank" href="https://www.instagram.com/py24.7/">
+                                <i class="uil uil-instagram"></i>
+                            </a>
+                            
+                        </div>
+
+                    </div>
+                    
+                </div>
+               
+            </div>
+            
+        </div>
+            <div>
+                <svg
+                class="waves"
+                viewBox = "0 24 150 28"
+                preserveAspectratio="none"
+                shape-rendering ="auto"
+                >
+                <defs>
+                    <path
+                      id="gentle-wave"
+                      d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+                    />
+                  </defs>
+                  <g class="parallax">
+                    <use
+                      xlink:href="#gentle-wave"
+                      x="48"
+                      y="0"
+                      fill="rgba(250,250,250,0.7)"
+                    />
+                    <use
+                      xlink:href="#gentle-wave"
+                      x="48"
+                      y="3"
+                      fill="rgba(250,250,250,0.5)"
+                    />
+                    <use
+                      xlink:href="#gentle-wave"
+                      x="48"
+                      y="5"
+                      fill="rgba(250,250,250,0.3)"
+                    />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#FAFAFA " />
+                  </g>
+
+                </svg>
+            </div>
+    </div>
+    <div class="blog section">
+        <div class="blog__content">
+            
+            
+            <div class="blog__data">
+                <div>
+                    <h3>Lastest Blog</h3>
+                    <p>see all</p>
+                </div>
+                <div class="blog__post">
+
+                </div>
+                
+
+            </div>
+            <div class="blog__tools">
+                <div class="blog__search">
+                    <form class="search__form">
+                        <div class="search-div">
+                            <label class="seacrh__form-tag">search</label>
+                            <input type = "text" name="name" class="search__form-input"  />
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
     
 </body>
 </html>
