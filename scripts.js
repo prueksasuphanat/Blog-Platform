@@ -21,6 +21,23 @@ function CloseMenu() {
 
 }
 
+//Dark Mode
+function Darkmode() {
+    const navbar = document.querySelector(".header");
+    const banner = document.querySelector(".banner");
+    const waves = document.querySelector(".waves")
+    const body = document.body
+    const Button = document.querySelector(".login__btn")
+
+
+    body.classList.toggle("dark-mode")
+    navbar.classList.toggle("dark-mode");
+    banner.classList.toggle("dark-mode");
+    waves.classList.toggle("dark")
+    Button.classList.toggle("dark-mode")
+
+ }
+
 var data = [
     {
         "id": 1,
@@ -50,3 +67,4 @@ var data = [
         "date" : "2012"
     }
 ]
+
