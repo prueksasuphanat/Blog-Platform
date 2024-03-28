@@ -41,34 +41,30 @@ function Darkmode() {
     Searchbar.classList.toggle("dark-mode")
 
  }
-
-var data = [
-    {
-        "id": 1,
-        "title": "หัวข้อบล็อกที่หนึ่ง",
-        "description": "เนื้อหาบล็อกที่หนึ่ง",
-        "coverpic": "url_ภาพปก_บล็อกที่หนึ่ง.jpg",
-        "name": "ชื่อผู้เขียนบล็อกที่หนึ่ง",
-        "tags": ["#lastest", "tag2", "tag3"],
-        "date" : "2012"
-    },
-    {
-        "id": 2,
-        "title": "หัวข้อบล็อกที่สอง",
-        "description": "เนื้อหาบล็อกที่สอง",
-        "coverpic": "url_ภาพปก_บล็อกที่สอง.jpg",
-        "name": "ชื่อผู้เขียนบล็อกที่สอง",
-        "tags": ["tag2", "tag4"],
-        "date" : "2012"
-    },
-    {
-        "id": 3,
-        "title": "หัวข้อบล็อกที่สาม",
-        "description": "เนื้อหาบล็อกที่สาม",
-        "coverpic": "url_ภาพปก_บล็อกที่สาม.jpg",
-        "name": "ชื่อผู้เขียนบล็อกที่สาม",
-        "tags": ["tag1", "tag3", "tag5"],
-        "date" : "2012"
-    }
-]
-
+ function boldText() {
+    var textarea = document.getElementById("myTextarea");
+    var selectedText = textarea.value.substring(textarea.selectionStart, textarea.selectionEnd);
+    var newText = '<b>' + selectedText + '</b>';
+    var textBefore = textarea.value.substring(0, textarea.selectionStart);
+    var textAfter = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+    textarea.value = textBefore + newText + textAfter;
+  }
+  
+  function italicText() {
+    var textarea = document.getElementById("myTextarea");
+    var selectedText = textarea.value.substring(textarea.selectionStart, textarea.selectionEnd);
+    var newText = '<i>' + selectedText + '</i>';
+    var textBefore = textarea.value.substring(0, textarea.selectionStart);
+    var textAfter = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+    textarea.value = textBefore + newText + textAfter;
+  }
+  
+  function underlineText() {
+    var textarea = document.getElementById("myTextarea");
+    var selectedText = textarea.value.substring(textarea.selectionStart, textarea.selectionEnd);
+    var newText = '<u>' + selectedText + '</u>';
+    var textBefore = textarea.value.substring(0, textarea.selectionStart);
+    var textAfter = textarea.value.substring(textarea.selectionEnd, textarea.value.length);
+    textarea.value = textBefore + newText + textAfter;
+  }
+  
