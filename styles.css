@@ -145,7 +145,7 @@ img{
     width: 60px;
     height: 30px;
     border-radius: 30px;
-    background-color: var(--darkmode-primary-color);
+    background-color: var(--darkmode-color);
     position: relative;
     transition: all 0.5s ease-in;
     cursor: pointer;
@@ -169,7 +169,7 @@ img{
   
   /* Changing toggle button background when checked */
   #toggleDarkmode:checked {
-    background: var(--title-color-dark);
+    background: var(--darkmode-primary-color);
 
   }
   
@@ -203,6 +203,26 @@ img{
   
     
 }
+.dark-mode .blog__section .blog__header-title{
+    color: #EEE;
+}
+.dark-mode.search__bar  input{
+    background-color: var(--title-color-dark);
+    color: #EEE;
+}
+.dark-mode .card{ 
+    background-color: var(--title-color);
+    color: #EEE;
+}
+.dark-mode .card__title ,.dark-mode .tags__header{
+    color: #EEE;
+}
+.dark-mode .tag{
+    background-color: var(--darkmode-primary-color);
+}
+.dark-mode .tags__section{
+    background-color: var(--title-color);
+}
 .banner.dark-mode {
     background: linear-gradient(
         60deg,
@@ -234,7 +254,63 @@ body.dark-mode,.header.dark-mode {
 
 
     
+/* Search*/
+.search__form {
+    position: relative;
+    width: 30rem;
+    border-radius: .7rem;
+    border: 1px solid rgba(0,0,0,0.1);
 
+}
+  .search__intput, .search__btn{
+    height: 3rem;
+    border: 0;
+    color: #2f2f2f;
+    font-size: var(--normal-font-size);
+    
+}
+  input[type="search"] {
+    outline: 0; 
+    width: 100%;
+    background: #fff;
+    padding: 0 1.6rem;
+    border-radius: .7rem;
+    appearance: none; 
+    transition: all .3s cubic-bezier(0, 0, 0.43, 1.49);
+    transition-property: width, border-radius;
+    z-index: 1;
+    position: relative;
+}
+  .search__btn {
+    display: none; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6rem;
+    background: rgb(75, 130, 181);
+    color: #EEE;
+    border-radius: 0 .7rem .7rem 0;
+}
+  input:not(:placeholder-shown) {
+    border-radius: .7rem 0 0 .7rem;
+    width: calc(100% - 6rem);
+    + button {
+      display: block;
+    }
+}
+  .search__label {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.search__bar{
+    margin-bottom: var(--mb-2);
+}
 /* Button */
 
 .button{
@@ -470,39 +546,181 @@ body.dark-mode,.header.dark-mode {
       transform: translate3d(85px, 0, 0);
     }
   }
+/* Tags */
+.tags__section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    flex-grow: 1;
+    flex-wrap: wrap;
+    max-width: max-content;
+    padding: 1rem 1.5rem 2rem 1.5rem;
+    background-color: var(--container-color);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 1rem;
+    height: max-content;
+    
+}
+.tags__header{
+    margin-bottom: var(--mb-0-5);
+}
+
+
+
+/* Footer */
+.footer{
+    background-color: var(--container-color);
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+.dark-mode .footer{
+    background-color: var(--title-color-dark);   
+}
+.dark-mode {
+    .footer__title,.footer__link
+    {
+        color: #EEE;
+
+    }
+
+    
+}
+.footer__container{
+    padding: 2rem 0 6rem;
+}
+
+.footer__title, .footer__link{
+    color: var(--title-color);
+}
+.footer__title{
+    text-align: center;
+    margin-bottom: var(--mb-2);
+}
+.footer__link{
+    color: var(--title-color-dark);
+}
+
+.footer__list{
+    display: flex;
+    justify-content: center;
+    column-gap: 1.5rem;
+    margin-bottom: var(--mb-2);
+}
+.footer__social{
+    display: flex;
+    justify-content: center;
+    column-gap: 1.25rem;
+}
+.footer__social-link{
+    background-color: var(--title-color);
+    color: var(--container-color);
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: center;
+
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    display: inline-flex;
+
+}
   
 
 
 
 /* Blog */
-.search_form{
-    position: relative;
-    height: 4rem;
+.blog__section{
+    padding-top: 5rem;
+    margin-bottom: 5.5rem;
 }
-.seacrh__form-tag{
-    position: absolute;
-    top: -0.75rem;
-    left: 1.25rem;
+.blog__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--mb-1-5);
+}
+.blog__data{
+    align-items: end;
+}
+.blog__card{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2rem;
+    gap: 2rem;
+}
+.card{
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 1rem ;
+    border-radius: 1rem;
+    height: auto;
+    background-color: var(--container-color);
+}
+.card__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+div .ellipsis {
+
+    width: 300px;  
+    height: 150px;   
+    overflow:hidden; 
+ }
+.coverpic{
+    width: 300px;
+    height: 300px;
+}
+.card__tag{
     font-size: var(--smaller-font-size);
-    padding: 0.25rem;
-    background-color: var(--body-color);
-    z-index: 10;
+    color: var(--container-color);
+    display: flex;
+    column-gap: 0.5rem;
+    
 }
-.search-div{
-    position: relative;
+.tag{
+    background-color: var(--title-color);
+    padding: 0 0.5rem 0 0.5rem ;
+    border-radius: 1rem;
 }
-.search__form-input{   
-    width: 100%;
-    height: 100%;
-    border: 2px solid rgba(0,0,0,0.6);
-    background: var(--body-color);
-    color: var(--text-color);
-    outline: none;
-    border-radius: 0.75rem;
-    padding: 0.5rem;
-    width: 250px;
-    z-index: 1;
+.avatar{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
 }
+.blog__post{
+    display: flex;
+    flex-grow: 1;
+    column-gap: 3rem;
+}
+
+.card__author{
+    display: flex;
+    column-gap: 1rem;
+    font-size: var(--small-font-size);
+}
+.author{
+    font-weight: var(--font-semi-bold);
+}
+.author__date{
+    display: flex;
+    align-items: center;
+    column-gap: 0.25rem;
+}
+.card__icon{
+    font-size: var(--smaller-font-size);
+}
+.card__title{
+    color: var(--title-color);
+}
+.load__more{
+    align-items: center;
+    text-align: center;
+}
+
 
 @media screen and (max-width: 992px) {
     .container{
@@ -525,15 +743,26 @@ body.dark-mode,.header.dark-mode {
         
     }
 
+    /* Blog */
+    .tags__section{
+        display: none;
+    }
+    .card{
+        width: auto;
+        height: 340px;
+    }
+   
 
-    
+    div .ellipsis{
+        overflow:hidden;
+        width: auto;
+    }
+
     
 }
 
 @media screen and (max-width: 768px) {
-    .search__form{
-        display: none;
-    }
+
     .header{
         height: 3rem;
         bottom: 0;
@@ -567,7 +796,7 @@ body.dark-mode,.header.dark-mode {
 
     .nav__list{
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(3,1fr);
         gap: 2rem;
     }
     
@@ -612,6 +841,31 @@ body.dark-mode,.header.dark-mode {
     .banner__title{
         font-size: 2.5rem;
     }
+
+    /* blog */
+    .coverpic{
+        width: 200px;
+        height: 200px ;
+    }
+    .card{
+        height: 240px;
+    }
+    .avatar{
+        width: 35px;
+        height: 35px;
+    }
+    .card__author-content{
+        font-size: var(--smaller-font-size);
+    }
+    .ellipsis{
+        margin-bottom: var(--mb-1-5);
+    }
+    .card__tag{
+        margin-bottom: var(--mb-1-5);
+    }
+    .search__form{
+        width: auto;
+    }
    
 
 
@@ -649,6 +903,15 @@ body.dark-mode,.header.dark-mode {
         top: -20px;
         font-size: var(--small-font-size);
     }
+    /* blog */
+    .ellipsis{
+        font-size: small;
+        margin-bottom: var(--mb-1);
+    }
+    .coverpic{
+        display: none;
+    }
+
     
 
 
@@ -660,7 +923,7 @@ body.dark-mode,.header.dark-mode {
     }
 
     .nav__list{
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(3,1fr);
         column-gap: 0;
     }
     .container{
@@ -684,6 +947,39 @@ body.dark-mode,.header.dark-mode {
         top: -20px;
         font-size: var(--small-font-size);
     }
+
+    /* blog */
+    .blog__header-title{
+        font-size: var(--h1-font-size);
+    }
+    .blog__header-seeall{
+        font-size: var(--small-font-size);
+    }
+    /* Dark mode*/
+    
+
+    #toggleDarkmode {
+        width: 40px;
+        height: 20px;
+    }
+    
+    /* Making a dot switch inside the Toggle Button */
+    #toggleDarkmode::before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        top: 50%;
+        left: 3px;
+    }
+
+    /* Changing dot switch color and moving to the right side when checked */
+    #toggleDarkmode:checked::before {
+        content: ""; 
+        left: 20px;
+    }
+
+
+
 
 
 }

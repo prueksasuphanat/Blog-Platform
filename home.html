@@ -21,25 +21,20 @@
                 <ul class="nav__list grid">
                     
                     <li class="nav__item">
-                        <a class="nav__link active-link" href="home" onclick="scrollToSection('home')">
+                        <a class="nav__link active-link" href="/home.html" >
                             <i class="uil uil-home nav__icon"></i>
                             Home
                         </a>
                     </li>
+
                     <li class="nav__item">
-                        <a class="nav__link" href="about" onclick="scrollToSection('about')">
-                            <i class="uil uil-user nav__icon"></i>
-                            Blog
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a class="nav__link" href="portfolio" onclick="scrollToSection('portfolio')">
+                        <a class="nav__link" href="/createblog.html" >
                             <i class="uil uil-scenery nav__icon"></i>
                             Create Blog
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a class="nav__link" href="contact" onclick="scrollToSection('contact')">
+                        <a class="nav__link" href="/proflie.html" >
                             <i class="uil uil-message nav__icon"></i>
                             Profile
                         </a>
@@ -142,34 +137,88 @@
                 </svg>
             </div>
     </div>
-    <div class="blog section ">
-        <div class="blog__content">
-            
+    <div class="blog__section">
+        <div class="blog__content container">
             
             <div class="blog__data">
-                <div>
-                    <h3>Lastest Blog</h3>
-                    <p>see all</p>
+                <div class="blog__header ">
+                    <h1 class="blog__header-title">Lastest Blog</h1>
+                    <a class="blog__header-seeall">see all</a>
                 </div>
-                <div class="blog__post">
-
-                </div>
-                
-
-            </div>
-            <div class="blog__tools">
-                <div class="blog__search">
-                    <form class="search__form">
-                        <div class="search-div">
-                            <label class="seacrh__form-tag">search</label>
-                            <input type = "text" name="name" class="search__form-input"  />
-                        </div>
+                <div class="search__bar">
+                    <form class="search__form" role ="search">
+                        <label class="search__label" for="search">Search for stuff</label>
+                        <input class="search__intput" id="search" type="search" placeholder="Search..." autofocus required />
+                        <button class="search__btn" type="submit">Go</button>    
                     </form>
                 </div>
+                <div class="blog__post">
+                    <div class="blog__card">
+                        <div  class="card">
+                            <img class="coverpic" src="images/cover1.jpg"/>
+                            <div class="card__content">
+                                <h3 class="card__title">Header 1</h3>
+                                <div class="ellipsis">
+                                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius saepe animi recusandae rem dicta! Commodi molestias dicta, quae laudantium ipsam, eum temporibus similique voluptatem ab, obcaecati accusamus perspiciatis eligendi quaerat!</p>
+                                </div>
+                                <div class="card__tag">
+                                    <p class="tag">#lastes</p>
+                                    <p class="tag">#education</p>
+                                </div>
+                                <div class="card__author">
+                                    <img class="avatar" src="images/avatar.jpg"/>
+                                    <div class="card__author-content">
+                                        <p class="author">Supanat Panyakom</p>
+                                        <p class="author__date">March 26 2024<span class="material-symbols-outlined card__icon">
+                                            schedule
+                                        </span></p>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                        <div  class="card">
+                            <img class="coverpic" src="images/cover1.jpg"/>
+                            <div class="card__content">
+                                <h3 class="card__title">Header 2</h3>
+                                <div class="ellipsis">
+                                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius saepe animi recusandae rem dicta! Commodi molestias dicta, quae laudantium ipsam, eum temporibus similique voluptatem ab, obcaecati accusamus perspiciatis eligendi quaerat!</p>
+                                </div>
+                                <div class="card__tag">
+                                    <p class="tag">#lastes</p>
+                                    <p class="tag">#education</p>
+                                </div>
+                                <div class="card__author">
+                                    <img class="avatar" src="images/avatar.jpg"/>
+                                    <div class="card__author-content">
+                                        <p class="author">Supanat Panyakom</p>
+                                        <p class="author__date">March 26 2024<span class="material-symbols-outlined card__icon">
+                                            schedule
+                                        </span></p>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
 
+                    </div>
+                    
+                    <div class="tags__section">
+                        <h1 class="tags__header">Tags</h1>
+                        <div class="card__tag">
+                            <p class="tag">#lastes</p>
+                            <p class="tag">#education</p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
+            
 
+            <div class="load__more">
+                <button class="button">
+                    Load more
 
+                </button>
+            </div>
         </div>
 
     </div>
@@ -177,4 +226,44 @@
 
     
 </body>
+<footer class="footer">
+    <div class="footer__container container">
+        <h1 class="footer__title">Personal Blog</h1>
+        <ul class="footer__list">
+            <li>
+                <a href="#home" class="footer__link">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="https://prueksasuphanat.github.io/" class="footer__link">
+                    Portfolio
+                </a>
+            </li>
+            <li>
+                <a href="#contact" class="footer__link">
+                    Profile
+                </a>
+            </li>
+
+        </ul>
+        <div class="footer__social">
+            <a href="" class="footer__social-link" target="_blank" href="https://www.facebook.com/suphanat.panyakom/">
+                <i class="bx bxl-facebook"></i>
+            </a>
+
+            <a href="" class="footer__social-link" target="_blank" href="https://www.instagram.com/py24.7/">
+                <i class="uil uil-instagram"></i>
+            </a>
+        </div>
+
+
+    </div>
+
+
+    </div>
+
+
+</footer>
 </html>

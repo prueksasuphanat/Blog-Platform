@@ -28,6 +28,8 @@ function Darkmode() {
     const waves = document.querySelector(".waves")
     const body = document.body
     const Button = document.querySelector(".login__btn")
+    const BlogHeader = document.querySelector(".blog__data")
+    const Searchbar  = document.querySelector(".search__bar")
 
 
     body.classList.toggle("dark-mode")
@@ -35,6 +37,8 @@ function Darkmode() {
     banner.classList.toggle("dark-mode");
     waves.classList.toggle("dark")
     Button.classList.toggle("dark-mode")
+    BlogHeader.classList.toggle("dark-mode")
+    Searchbar.classList.toggle("dark-mode")
 
  }
 
